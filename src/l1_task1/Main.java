@@ -41,8 +41,9 @@ public class Main {
         //a метод toList() или collect() - превращает поток обратно в список (или сбор результата)
         ageSort.addAll(arrayList.stream().filter(a -> a.getAge() >=19 && a.getAge() <=23).toList());
         System.out.println("\nAge from 19 to 23:\n" + ageSort);
-        ArrayList<Student> nameA = arrayList; //присваиваем значения
-        nameA.sort(Comparator.comparing(Student::getName)); //sort() - упорядачивает строковые элементы по алфавиту
-        System.out.println("\nName start with 'A':" + nameA.getFirst());
+        ArrayList<Student> nameA = new ArrayList<>();
+        nameA.addAll(arrayList);
+        nameA.stream().sorted(); //sorted() - сортирует по возрастанию
+        System.out.println("\nName start with 'A':" + nameA.getFirst()); //после сортировки получаем первый элемент
     }
 }
