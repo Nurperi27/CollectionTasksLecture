@@ -203,19 +203,6 @@ public class Main {
                             System.out.println("Enter rating to Courier[-10; 10]");
                             double rating13 = scInt.nextDouble();
                             courierService.setCourierRating(idCourier13, rating13);
-//                        System.out.println("Set Courier Rating");
-//                        try {
-//                            System.out.print("Enter Courier id to set rating: ");
-//                            Long idCourier13 = scInt.nextLong();
-//
-//                            System.out.print("Enter rating to Courier [-10; 10]: ");
-//                            double rating13 = scInt.nextDouble();
-//
-//                            courierService.setCourierRating(idCourier13, rating13);
-//
-//                        } catch (RuntimeException e) {
-//                            System.out.println(e.getMessage());
-//                        }
                             break;
                         case 14:
                             System.out.println("Get Couriers by Rating");
