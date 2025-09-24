@@ -61,20 +61,6 @@ public class CourierServiceImpl implements CourierService {
         List<Courier> couriersMinRating = new ArrayList<>();
         List<Courier> couriersMaxRating = new ArrayList<>();
         try {
-            /*for (Courier c : Database.courierList) {
-                if(c.getRating() > minRating){
-                    couriersMaxRating.add(c);
-                }else if(c.getRating() <= minRating){
-                    couriersMinRating.add(c);
-                }
-            }
-            if (!couriersMaxRating.isEmpty()) {
-                System.out.println("There're Couriers with more than " + minRating + " minimal rating: ");
-                return couriersMaxRating;
-            } else if (!couriersMinRating.isEmpty()) {
-                System.out.println("There're Couriers with less or equal than " + minRating + " minimal rating: ");
-                return couriersMinRating;
-            }*/
             if(minRating > 5){
                 for (Courier c1 : Database.courierList){
                     if(c1.getRating() > 5){
@@ -124,22 +110,5 @@ public class CourierServiceImpl implements CourierService {
         if(!isblock) {
             throw new RuntimeException("Such courier's id not found!");
         }
-//        boolean isblock = false;
-//        if(newRating < -10 || newRating > 10){
-//            throw new RuntimeException("Rating must be from -10 to 10!");
-//        }
-//        for(int i=0; i<Database.courierList.size(); i++){
-//            Courier c  = Database.courierList.get(i); //i (index) - для того, чтобы получить нужного Coirier с id
-//            if(c.getId().equals(idCourier)){
-//                isblock = true;
-//                Courier setRating = new Courier(c.getId(), c.getFullName(), newRating, c.getAvailable()); //create a new Couriers with new update Rating
-//                Database.courierList.set(i, setRating); //замена старого на новый
-//                System.out.println("Successfully setting Courier's Rating!");
-//                break;
-//            }
-//        }
-//        if(!isblock) {
-//            throw new RuntimeException("Such courier's id not found!");
-//        }
     }
 }
